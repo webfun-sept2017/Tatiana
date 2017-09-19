@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Range Print</title>
+	</head>
+	<body>
+		<script>
+			var start, end, skip = 0;
+
+			function printRange(start, end, skip) {
+
+				if (!skip) {
+					skip = 1;
+				}
+
+				if (!end) {
+					end = start;
+					start = 0;
+				}
+
+				for (var i = start; i < end; i += skip) {
+
+					console.log(i);
+				}
+
+			}
+
+			printRange(2,10,2);
+			console.log( "---------------------");
+			printRange(4, 10);
+			console.log( "---------------------");
+			printRange(3);
+			
+		</script>
+
+	</body>
+</html>

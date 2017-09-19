@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Random Chance</title>
+	</head>
+	<body>
+		<script>
+			function randomChance(val) {
+
+				while (val > 0) {
+
+					if (Math.floor(Math.random() * 100) === Math.floor(Math.random() * 100)){
+
+					  var winnings = Math.trunc(Math.floor(Math.random() * 50) + 51);
+
+					  val += winnings;
+
+					  console.log(" You are a WINNER! You now have "+ val +" quarters.");
+					}
+					else {
+
+						console.log("Sorry try again. You now have "+ val +" quarters left.");			    
+					}
+
+					val--;
+				}
+
+			  console.log(" You have " + val + " quarters left! Get a job!");
+			}
+
+			randomChance(100);
+			
+		</script>
+
+	</body>
+</html>

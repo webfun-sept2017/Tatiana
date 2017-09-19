@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: For a Few Billion</title>
+	</head>
+	<body>
+		<script>
+			var reward = 0;
+
+			for (var i = 0; i < 30; i++) {
+
+				console.log("Day " + (i + 1));
+				if (i == 0) {
+					reward = 0.01;
+				}
+				else {
+					reward = reward*2;
+				}
+			}
+
+			console.log(reward);
+			
+		</script>
+
+	</body>
+</html>

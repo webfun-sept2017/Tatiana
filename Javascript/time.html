@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>JS: If You Don't Mind, Can I Have The Time?</title>
+	</head>
+	<body>
+
+		<script>
+			var hour = 0;
+			var minute = 0;
+			var period = " ";
+			var almost = "It's almost ";
+			var after = "It's just after ";
+			//console.log (hour, minute);
+
+			function dialog() {
+
+				if (hour == 0 || hour > 12 || minute > 60) {
+					console.log( " Entry is out of range.");
+				};
+
+				if ( minute < 30) {	
+					if (hour == 12 && minute == 0) {
+						if (period == "AM") {
+							console.log( "It's midnight!");
+						}
+						else {
+							console.log( "It's noon!");
+						}
+					}
+					else if (hour == 12 && minute != 0) {
+						if (period == "AM") {
+							console.log( after + "midnight!");
+						}
+						else {
+							console.log( after + "noon!");
+						}
+					}
+					else if (hour < 12) {
+						if (period == "AM") {
+							console.log( after + hour + " in the morning.");
+						}
+						else {
+							console.log( after + hour + " in the evening.");
+						}					
+					}
+				}
+				else {
+					//console.log(hour, minute);
+					hour = hour + 1;
+					if (hour == 13) {
+						hour = hour - 12;
+					}
+					if (hour == 12 ) {
+						if (period == "AM") {
+							console.log( almost + "midnight!");
+						}
+						else {
+							console.log( almost + "noon!");
+						}
+					}					
+					else if (hour < 12) {
+						if (period == "AM") {
+							console.log( almost + hour + " in the morning.");
+						}
+						else {
+							console.log( almost + hour + " in the evening.");
+						}					
+					}
+				}
+			}; 
+
+			hour = 8;
+			minute = 50;
+			//console.log(hour);
+			dialog(); //it's almonst 9AM
+
+			hour = 7;
+			minute = 15;
+			period = "PM";
+
+			dialog(); // it's just after 7PM
+
+			hour = 12;
+			minute = 15;
+			period = "PM";
+
+			dialog(); //it's just after noon
+
+			hour = 11;
+			minute = 35;
+			period = "AM";	
+
+			dialog(); //it's almost midnight
+
+
+			hour = 11;
+			minute = 35;
+			period = "PM";	
+
+			dialog(); //it's almost noon
+
+
+			hour = 12;
+			minute = 00;
+			period = "AM";	
+
+			dialog(); //it's midnight
+
+			hour = 12;
+			minute = 00;
+			period = "PM";	
+
+			dialog(); //it's  noon	
+ 
+			hour = 12;
+			minute = 40;
+			period = "PM";	
+
+			dialog(); //1	
+			//console.log(hour);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Fancy Array</title>
+	</head>
+	<body>
+		<script>
+			var arr = [ "James", "Jill", "Jane", "Jack" ];
+
+			function printArray(array, reversed) {
+
+				if ( reversed === true) {
+					for (var i = array.length - 1; i >= 0; i --) {
+
+						console.log((array.length - (i+1))  + " -> " + array[i]);
+					}					
+				}
+				else {
+					for (var i = 0; i < array.length; i ++) {
+
+						console.log(i + " -> " + array[i]);
+					}					
+				}
+			}
+
+			printArray(arr);
+			console.log("Reversed: ");
+			printArray(arr, true);
+			
+		</script>
+
+	</body>
+</html>

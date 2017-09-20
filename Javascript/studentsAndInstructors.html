@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Students and Instructors</title>
+	</head>
+	<body>
+		<script>
+			var students = [ 
+			     {first_name:  'Michael', last_name : 'Jordan'},
+			     {first_name : 'John', last_name : 'Rosales'},
+			     {first_name : 'Mark', last_name : 'Guillen'},
+			     {first_name : 'KB', last_name : 'Tonel'}
+			]
+
+			console.log("Part One: ");
+			for (var student in students) {
+				
+				console.log(students[student].first_name + ' ' + students[student].last_name);
+			}	
+			console.log("**********************************");
+
+			console.log("Part Two: ");
+
+			var users = {
+			 'Students': [ 
+			     {first_name:  'Michael', last_name : 'Jordan'},
+			     {first_name : 'John', last_name : 'Rosales'},
+			     {first_name : 'Mark', last_name : 'Guillen'},
+			     {first_name : 'KB', last_name : 'Tonel'}
+			  ],
+			 'Instructors': [
+			     {first_name : 'Michael', last_name : 'Choi'},
+			     {first_name : 'Martin', last_name : 'Puryear'}
+			  ]
+			 }
+
+			 //counting letters
+			function char_count(str) 
+			{
+			 var letter_Count = 0;
+			 for (var i = 0; i < str.length; i++) 
+			 {
+			      letter_Count += 1;
+			  }
+			  return letter_Count;
+			}
+
+			var count = 0;
+
+			for (var user in users) {
+				console.log(user);
+
+				if (user == "Students") {
+					for (var j=1; j <= users.Students.length; j++) {
+
+						count = char_count(users.Students[j-1].first_name) + char_count(users.Students[j-1].last_name);
+
+						console.log( j + " - " + users.Students[j-1].first_name + ' ' + users.Students[j-1].last_name + " - " + count);					
+					}
+				}
+				else {
+					//instructors
+					for (var j=1; j <= users.Instructors.length; j++) {
+
+						count = char_count(users.Instructors[j-1].first_name) + char_count(users.Instructors[j-1].last_name);
+
+						console.log( j + " - " + users.Instructors[j-1].first_name + ' ' + users.Instructors[j-1].last_name + " - " + count);					
+					}
+				}
+			}			
+
+		</script>
+
+	</body>
+</html>

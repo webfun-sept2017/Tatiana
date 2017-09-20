@@ -1,0 +1,178 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 900px;
+	margin: auto;
+
+}
+
+#navigation h2 {
+	color: white;
+	padding: 0px 0px 0px 20px;
+	display: inline-block;
+}
+
+#navigation  ul {
+	display: inline-block;
+	margin-left: 200px;
+}
+
+#navigation  li {
+	display: inline;
+	color: white;
+	padding: 10px;
+}
+
+.blue-color {
+ 	color: #4db8ff;
+ }
+
+#wrapper{
+	width: 100%;
+	background-color: #062134;
+}
+
+#container {
+	background-color: #FFFFFF;
+	margin: 10px;
+}
+
+#logo img {
+	margin: 15px 0px 10px 15px;
+}
+
+.description {
+	margin: 10px 5px 0px 15px;
+	padding: 5px 5px 5px 10px;
+	width: 250px;
+	background-color: #006bb3;
+	display: inline-block;
+}
+
+.description img {
+	width: 10%;
+	display: inline-block;
+	background-color: white;
+	border-radius: 50px;
+}
+
+.description h2 {
+	color: white;
+	display: inline-block;
+}
+
+.description p {
+	color: white;
+	margin-top: 0px;
+}
+
+.description button{
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 50%;
+  background: #1aa3ff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#4db8ff 50%, #1aa3ff 50%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4db8ff 50%, #1aa3ff 50%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4db8ff 50%, #1aa3ff 50%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4db8ff 50%, #1aa3ff 50%); /* Standard syntax */
+  margin-bottom: 5px;
+}
+
+#titles {
+	width: 100%;
+}
+
+#titles h3 {
+	display: inline-block;
+}
+
+#left-title {
+	margin-left: 15px;
+}
+
+#right-title {
+	margin-left: 35%;
+}
+
+.other-info{
+  width: 250px;
+  margin: 0px 10px 0px 20px;
+  display: inline-block;
+}
+
+.other-info img{
+  width: 250px;
+  margin-bottom: 90px;
+}
+
+.other-info p {
+	margin-bottom: 10px;
+}
+
+.other-info a {
+	text-decoration: none;
+}
+
+.color-yellow {
+	color: yellow;
+}
+
+.color-red {
+	color: red;
+	font-size: 24px;
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+#testimonials {
+	vertical-align: top;
+}
+
+.triangle {
+  position: relative;
+  padding: 15px;
+  color: #000;
+  background: #daedff;
+}
+
+.triangle:after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* value = - border-top-width - border-bottom-width */
+  left: 50px; /* controls horizontal position */
+  border-width: 15px 15px 0; /* vary these values to change the angle of the vertex */
+  border-style: solid;
+  border-color: #daedff transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+
+.author {
+	font-size: 12px;
+}
+
+#footer {
+	width: 100%;
+	height: 50px;
+	background-color: #daedff;
+	margin-top: 15px;
+	border-top: 1px solid #062134;
+	border-bottom: 4px solid #062134;
+}
+
+#footer ul {
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 200px;
+}
+
+#footer ul li {
+	display: inline;
+	padding: 20px;
+	color: #062134;
+	font-size: 10px;
+}

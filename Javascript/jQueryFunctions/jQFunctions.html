@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: jQuery Functions</title>
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="css/style.css">		
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+			$('#btn-remove').click(function() {
+				$('span').removeClass( "color-yellow" );	
+			}); 
+
+			$('#btn-addClass').click(function() {
+				$('.etiam').addClass( "f-italic color-red" );	
+			}); 
+
+
+			$('#btn-addClass').click(function() {
+				$('.etiam').addClass( "f-italic color-red" );	
+			});			
+
+			$('#btn-slide').click(function() {
+				$('p').slideToggle( "fast" );	
+			});		
+
+			$('#btn-append').click(function() {
+				$('h2').append( " Ta-Da!" );	
+			});	
+
+            $('#btn-fadeOut').click(function(){
+                $('#footer').fadeOut("slow");
+                $('#footer').fadeIn("slow");
+            });
+
+            $('#btn-hide').click(function(){
+                $('#title').hide();
+            });			
+        });
+
+    </script>		
+	</head>
+	<body>
+      <div id="wrapper">
+  	  	<div id="navigation">
+          <h2 id="title">My jQuery basic assignment!</h2>
+          <ul>
+            <li><span class="blue-color">Home</span></li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li>Clients</li>
+          </ul> 	  	
+
+        <div id="container">
+            <div class="description">
+              <h2>SERVICES</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span></p>
+              <button id="btn-remove">Remove Y</button>
+            </div>
+            <div class="description">
+              <h2>PROJECTS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span> </p>
+              <button id="btn-addClass">Add Class</button>
+            </div>
+            <div class="description">
+              <h2>CLIENTS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span> </p>
+              <button id="btn-slide">Slide Toggle</button>
+            </div>
+            <div class="description">
+              <h2>SERVICES</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span></p>
+              <button id="btn-append">Append</button>
+            </div>
+            <div class="description">
+              <h2>PROJECTS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span> </p>
+              <button id="btn-fadeOut">Fade Out/In</button>
+            </div>
+            <div class="description">
+              <h2>CLIENTS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <span class="color-yellow">Praesent lobortis commodo auctor.</span> Nulla interdum augue et orci sollicitudin commodo ac vel leo. <span class="etiam">Etiam tempus tortor placerat commodo imperdiet.</span> </p>
+              <button id="btn-hide">Hide</button>
+            </div>
+            <div id="footer">
+              <ul>
+                <li ><span class="blue-color">Home</span></li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Clients</li>
+              </ul>
+            </div>
+
+        </div><!--container-->
+
+      </div><!--wrapper-->		
+
+	</body>
+</html>

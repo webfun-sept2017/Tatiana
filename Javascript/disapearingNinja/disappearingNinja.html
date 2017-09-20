@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: jQuery Functions</title>
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="css/style.css">		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+          $('img').each(function(i) {
+              $(this).attr('id', i).attr('class', 'ninjaImg');
+          });
+
+          //doesn't work for some reason...
+          // $('div').on('click', 'img', function(){  
+          //   var imgId = $(this).attr('id');
+          //   console.log(imgId);
+          //   $('#imgId').hide();
+          // })      
+            
+          $('img').click(function() {
+            $(this).hide();  
+           });
+
+    			$('button').click(function() {
+    				$('img').show();	
+			     }); 
+        });
+
+    </script>		
+	</head>
+	<body>
+    <div id="wrapper">
+      <div>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+        <img src="images/ninja.png" alt="ninja image"/>
+      </div>
+      <button>RESTORE</button>
+    </div> <!-- end of wrapper -->
+
+	</body>
+</html>

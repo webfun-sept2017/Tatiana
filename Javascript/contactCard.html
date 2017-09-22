@@ -14,15 +14,14 @@
             $("#contactList").append(
                 "<div class='contactCard'><h1>" + $('#first_name').val() +
                 " " + $('#last_name').val() + 
-                "</h1><h3 class='display'>Description</h3></div>"
+                "</h1><h3 class='display'>Click for description!</h3></div>"
               );
               return false;
 
             })
           $(document).on('click', '.display', function(){
-
-            $(this).replaceWith(
-                "<p class='description'>" + $('#desc').val() + "</p>"
+            $(this).parent().empty().replaceWith(
+                "<div class='description'>" + $('#desc').val() + "</div>"
               );            
           })
             

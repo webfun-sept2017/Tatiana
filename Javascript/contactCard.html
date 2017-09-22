@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Users</title>
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="css/styleCard.css">		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+          $('#userForm').submit(function() {
+
+            $("#contactList").append(
+                "<div class='contactCard'><h1>" + $('#first_name').val() +
+                " " + $('#last_name').val() + 
+                "</h1><h3 class='display'>Description</h3></div>"
+              );
+              return false;
+
+            })
+          $(document).on('click', '.display', function(){
+
+            $(this).replaceWith(
+                "<p class='description'>" + $('#desc').val() + "</p>"
+              );            
+          })
+            
+        });
+
+    </script>		
+	</head>
+	<body>
+    <div id="wrapper">
+      <form id="userForm" action="" method="">
+          <div>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name">
+          </div>
+
+          <div>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name">
+          </div>
+
+          <div>
+            <label for="desc">Description:</label>
+            <textarea type="text" id="desc" name="desc"> </textarea>
+          </div>
+
+          <input id="btn-submit" type="submit" value="Add User">
+        </form>
+
+        <div id="contactList"> </div>
+
+    </div> <!-- end of wrapper -->
+
+	</body>
+</html>

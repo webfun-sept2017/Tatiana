@@ -15,14 +15,22 @@
           $(document).on('click', 'img', function() {
             var id = $(this).attr('id');
             console.log(id);
-            $.get("http://pokeapi.co/api/v1/pokemon/" + id + "/", function(res) {
+            $.get("https://pokeapi.co/api/v1/pokemon/" + id + "/", function(res) {
                 var html_str = "";
-                html_str += "<div class='pokedex'><h4>Types</h4>";
+                html_str += "<div class='pokedex'>";
+                html_str += "<h1>" + res.name + "</h1>";
+                html_str += "<img id=" + id + " src='http://pokeapi.co/media/img/" + id + ".png'>";
+                html_str += "<h4>Types</h4>";
                 html_str += "<ul>"; 
                 for(var i = 0; i < res.types.length; i++) {
                     html_str += "<li>" + res.types[i].name + "</li>";
                 }
-                html_str += "</ul></div>";
+                html_str += "</ul>";
+                html_str += "<h4>Height</h4>";
+                html_str += "<div>" + res.height + "</div>";
+                html_str += "<h4>Weight</h4>";
+                html_str += "<div>" + res.weight + "</div>";
+                html_str += "</div>";
                 $("#boxes").append(html_str);
             }, "json");
           })

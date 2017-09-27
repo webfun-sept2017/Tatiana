@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS: Weather Forcast</title>
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="css/styleWeather.css">		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $('form').submit(function(e) {
+          e.preventDefault();
+
+          var place = $("input[name = search]").val();
+          // your code here (build up your url)
+          var url = "https://api.openweathermap.org/data/2.5/weather?q=" + place + "&&appid=8349ad5e6bba395d3c4a42b77ef38130";  
+                  
+          $.get(url, function(res) {
+            console.log(res);
+            $("#place").html("<h1>" + res.name + "</h1>");
+            $("#temp").html("<p>Temperature: " + Math.round(((res.main.temp - 273.15) * 1.8 + 32)) + "°F</p>");
+          }, "json");
+
+        }); 
+                 
+      });
+
+    </script>		
+	</head>
+	<body>
+    <div id="wrapper">
+      <div class="search">
+        <form action="" method="">
+            <input type="text" name="search">
+
+            <input type="submit" value="Weather Search" name="search_weather">
+        </form>
+
+        <h1 id="place"></h1>
+        <h3 id="temp"></h3>        
+      </div>
+
+    </div> <!-- end of wrapper -->
+
+	</body>
+</html>

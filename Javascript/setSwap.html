@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Setting and Swapping</title>
+	</head>
+	<body>
+
+		<script>
+			var myNumber = 42;
+			var myName = "Tatiana";	
+					
+			function setSwap(myNumber, myName) {
+
+				var temp = "";
+
+				console.log("Before swap - Name: " + myName + "; Number: " + myNumber);
+				//swapping
+				temp = myName;
+				myName = myNumber;
+				myNumber = temp; 
+
+				console.log("After swap - Name: " + myName + "; Number: " + myNumber);				
+			}
+
+			setSwap(myNumber, myName);
+
+		</script>
+
+	</body>
+</html>

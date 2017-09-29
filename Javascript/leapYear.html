@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Leap Year</title>
+	</head>
+	<body>
+
+		<script>
+			function leapYear(year)
+			{
+			  if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+			  	console.log(year + " - leap year");
+			  }
+			  else console.log(year + " - not a leap year");
+			}
+
+			leapYear(2016);
+			leapYear(1994);
+
+		</script>
+
+	</body>
+</html>

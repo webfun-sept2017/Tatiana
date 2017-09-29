@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Multiples of Three - but Not All</title>
+	</head>
+	<body>
+
+		<script>
+			var number = -300;
+
+			function printMultiples(){
+			    for (var i = number; i <= 0; i++) {
+			        if (i % 3 === 0) {
+			        	if (i === -3 || i === -6) {
+			        		continue;
+			        	}
+			            console.log(i);
+			        }
+			    }				
+			}
+
+			printMultiples();
+
+		</script>
+
+	</body>
+</html>

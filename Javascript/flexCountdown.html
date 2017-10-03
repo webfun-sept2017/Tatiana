@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Flexible Countdown</title>
+	</head>
+	<body>
+
+		<script>
+			function countdown(lowNum, highNum, mult) {
+				var output = '';
+				for (var i = highNum; i >lowNum; i--) {
+					if (i % mult === 0) {
+						output = output + ' ' + i;
+					}
+				}
+				console.log(output);
+			}
+
+			countdown(2,9,3);
+
+		</script>
+
+	</body>
+</html>

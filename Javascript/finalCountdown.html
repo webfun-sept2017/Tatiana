@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Final Countdown</title>
+	</head>
+	<body>
+
+		<script>
+			function countdown(param1,param2,param3,param4) {
+				var output = '';
+				for (var i = param2; i <=param3; i++) {
+					if (i % param1 === 0) {
+						if (i === param4) continue;
+						else output = output + ' ' + i;
+					}
+				}
+				console.log(output);
+			}
+
+			countdown(3,5,17,9);
+
+		</script>
+
+	</body>
+</html>

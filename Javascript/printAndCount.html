@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Print and Count</title>
+	</head>
+	<body>
+
+		<script>
+			
+			function printCount(){
+				var count = 0;
+				
+			    for (var i = 512; i <= 4096; i++) {
+			        if (i % 5 === 0) {
+			            console.log(i);
+			            count++;
+			        }
+			    }
+			    console.log(count);				
+			}
+
+			printCount();
+
+		</script>
+
+	</body>
+</html>

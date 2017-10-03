@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Algorithms: Counting, the Dojo Way</title>
+	</head>
+	<body>
+
+		<script>
+			function printCount(){
+				var tempStr = '';
+				
+			    for (var i = 1; i <= 100; i++) {
+			        if (i % 5 === 0) {
+			        	tempStr = i + ": Coding";
+				        if (i % 10 === 0) {
+				        	tempStr = tempStr + " Dojo";
+				        }			            
+			        }
+			        console.log(tempStr);
+			    }
+			    				
+			}
+
+			printCount();
+
+		</script>
+
+	</body>
+</html>
